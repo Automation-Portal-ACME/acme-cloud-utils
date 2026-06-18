@@ -1,0 +1,14 @@
+---
+- name: Gather EC2 instance facts
+  amazon.aws.ec2_instance_info:
+    filters:
+      instance-state-name: running
+  register: ec2_instances
+
+- name: Apply standard tags to instances
+  amazon.aws.ec2_tag:
+    resource: "{{ item.instance_id }}"
+    tags:
+      Environment: "{{ acme_environment | default('dev') }}"
+      ManagedBy: ansible
+  loop: "{{ ec2_instances.instances }}"
