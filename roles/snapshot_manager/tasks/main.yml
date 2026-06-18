@@ -1,0 +1,12 @@
+---
+- name: Find volumes to snapshot
+  amazon.aws.ec2_vol_info:
+    filters:
+      tag:Backup: 'true'
+  register: backup_volumes
+
+- name: Create snapshots
+  amazon.aws.ec2_snapshot:
+    volume_id: "{{ item.id }}"
+    description: "Automated snapshot"
+  loop: "{{ backup_volumes.volumes }}"
