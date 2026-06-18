@@ -1,0 +1,14 @@
+namespace: acme
+name: cloud_utils
+version: 1.0.0
+readme: README.md
+authors:
+  - ACME Corp Platform Team
+description: "ACME Corp cloud utility roles for resource tagging, cost management, and snapshot automation"
+tags:
+  - cloud
+  - aws
+  - azure
+  - utilities
+dependencies: {}
+repository: https://github.com/Automation-Portal-ACME/acme-cloud-utils
