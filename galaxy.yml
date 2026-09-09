@@ -1,0 +1,13 @@
+namespace: acme
+name: cloud_utils
+version: 1.0.0
+readme: README.md
+authors:
+  - Automation Portal ACME
+description: Cloud utility automation collection
+license:
+  - GPL-2.0-or-later
+tags:
+  - cloud
+  - aws
+repository: https://github.com/Automation-Portal-ACME/acme-cloud-utils
