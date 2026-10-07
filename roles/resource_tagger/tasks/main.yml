@@ -1,4 +1,4 @@
 ---
 - name: Tag cloud resources
   ansible.builtin.debug:
-    msg: "Tagging cloud resources"
+    msg: Tagging cloud resources
