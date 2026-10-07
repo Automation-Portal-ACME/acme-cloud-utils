@@ -1,4 +1,4 @@
 ---
 - name: Manage snapshots
   ansible.builtin.debug:
-    msg: "Managing cloud snapshots"
+    msg: Managing cloud snapshots
